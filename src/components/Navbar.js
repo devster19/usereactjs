@@ -39,17 +39,3 @@ export default function Navbar() {
     </Router>
   );
 }
-
-
-
-
-
-
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
-    </div>
-  );
-}

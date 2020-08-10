@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useReducer } from "react";
+import { initialState, reducer } from "../reducers/todo.reducer";
+import Todo from "./Todo";
+import AddTodo from "./AddTodo";
 
 export default function Play() {
-    return (
-      <div>
-        <h2>Play Page</h2>
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut ullamcorper dui. Quisque quis accumsan mi. Sed rutrum vulputate sem, eget scelerisque quam elementum id. Maecenas non tincidunt ligula, eget viverra metus. Nullam porta pulvinar dui tempus fringilla. Duis elit quam, consectetur ac eros in, tristique posuere libero. Cras convallis ac tortor feugiat ornare.</span>  
-      </div>
-    );
+  const [state, dispatch] = useReducer(reducer, initialState);
+  return (
+  <>
+    <h1>Use Reducer API</h1>  
+    <AddTodo
+      add={text => dispatch({type: "add", text: text})}
+    />
+    {state.todos.map(t => (
+      <Todo
+        key={t.id}
+        todo={t}
+        remove={() => dispatch({type: "remove", id: t.id})}
+        edit={text => dispatch({type: "edit", id: t.id, text: text})}
+      />
+    ))}
+  </>);
   }

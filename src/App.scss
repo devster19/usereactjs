@@ -44,3 +44,42 @@ nav{
     }
   }
 }
+.AddTodo {
+  display: flex;
+  margin-top:40px
+}
+
+.AddTodoInput, .EditTodoInput, .TodoText {
+  width: 80%;
+  height: 25px;
+  font-size: 14px;
+  line-height: 25px;
+  
+}
+
+.AddTodoButton, .RemoveTodo, .EditTodo, .EditTodoSave, .EditTodoCancel {
+  margin-left: 5px;
+  height: 30px;
+  vertical-align: bottom;
+  font-size: 14px;
+  text-transform: uppercase;
+  border:none;
+  flex-grow: 1;
+  &.danger{
+    background-color: lightcoral;
+  }
+  &.warn{
+    background-color: lightsalmon;
+  }
+  &.info{
+    background-color: lightgreen;
+  }
+}
+
+.Todo {
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  margin: 10px 0px;
+  padding: 1px;
+  display: flex;
+}
