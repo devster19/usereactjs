@@ -1,10 +1,14 @@
 import React from "react";
 
 
-const SongList = () => {
+const SongList = props => {
     return (
         <div className="song-content">
-            <p>Content of songlist will be available soon</p>
+            <ul className="chart-list">
+            {
+                props.charts.map(song => (<li key={song.title}><span>{song.title}</span><span>{song.artist}</span></li>))
+            }
+            </ul>  
         </div>
         
     )
