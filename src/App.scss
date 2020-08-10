@@ -44,3 +44,13 @@ nav{
     }
   }
 }
+.btn-add{
+  width: 180px;
+  height: 40px;
+  background: lightgreen;
+  border: none;
+  color: #444;
+  &:visited,&:focus{
+    outline: none;
+  }
+}
