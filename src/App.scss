@@ -83,3 +83,16 @@ nav{
   padding: 1px;
   display: flex;
 }
+
+.btn{
+  height: 40px;
+  background: lightgreen;
+  border:none;
+  margin: 20px;
+  width:180px;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  &.warn{
+    background: lightsalmon;
+  }
+}
