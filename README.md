@@ -1,3 +1,3 @@
-## 02 use components
+## 03 use props
 
 
